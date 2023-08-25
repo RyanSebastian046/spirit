@@ -27,7 +27,7 @@
           </a>
         </li>
         <li class="nav-item">
-        <a href="<?php echo site_url('admin/Dashboard/data_delivery') ?>" class="nav-link">
+        <a href="<?php echo site_url('admin/Admin/data_delivery') ?>" class="nav-link">
             <i class="fas fa-people-carry"></i>
             <p>
               Data Delivery

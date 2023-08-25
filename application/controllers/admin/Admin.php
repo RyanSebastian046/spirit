@@ -7,6 +7,8 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Mdata_produksi'); // Load model
+
+        $this->load->model('Mdata_delivery'); // Load model
     }
 
 	public function dashboard()

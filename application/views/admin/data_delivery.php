@@ -7,10 +7,10 @@
     <?php $this->load->view('home/template/preload') ?>
 
     <!-- Navbar -->
-    <?php $this->load->view('home/template/navbar') ?>
+    <?php $this->load->view('admin/template/navbar') ?>
 
     <!-- Sidebar -->
-    <?php $this->load->view('home/template/sidebar') ?>
+    <?php $this->load->view('admin/template/sidebar') ?>
 
     <!-- Content -->
     <div class="content-wrapper">
@@ -21,7 +21,7 @@
 
             <div class="card-body">
                 <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-sm-12 col-md-6">
                             <div class="dt-buttons btn-group flex-wrap"> <button
                                     class="btn btn-secondary buttons-copy buttons-html5" tabindex="0"
@@ -46,11 +46,10 @@
                                         class="form-control form-control-sm" placeholder=""
                                         aria-controls="example1"></label></div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="row">
                         <div class="col-sm-12">
-                            <table id="example1" class="table table-bordered table-striped dataTable dtr-inline"
-                                aria-describedby="example1_info">
+                            <table id="myTable" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th class="sorting sorting_asc" tabindex="0" aria-controls="example1"
@@ -76,24 +75,90 @@
                                         </th>
                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1" aria-label="CSS grade: activate to sort column ascending">
-                                            6                                        
+                                            6
                                         </th>
                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1" aria-label="CSS grade: activate to sort column ascending">
-                                            7                                        
+                                            7
                                         </th>
                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1" aria-label="CSS grade: activate to sort column ascending">
-                                            8                                        
+                                            8
                                         </th>
                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1" aria-label="CSS grade: activate to sort column ascending">
-                                            9                                        
+                                            9
+                                        </th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
+                                            colspan="1" aria-label="CSS grade: activate to sort column ascending">
+                                            10
+                                        </th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
+                                            colspan="1" aria-label="CSS grade: activate to sort column ascending">
+                                            11
+                                        </th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
+                                            colspan="1" aria-label="CSS grade: activate to sort column ascending">
+                                            12
+                                        </th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
+                                            colspan="1" aria-label="CSS grade: activate to sort column ascending">
+                                            13
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                
+                                <?php foreach ($records as $record): ?>
+                                <tr>
+                                    <td>
+                                        <?php echo $record->JidNumber; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $record->Purchase_orderNo; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $record->Description; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $record->Order_Qty; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $record->Delivery_Quantity; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $record->WBS_Element; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $record->Net_Price; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $record->Total_Net_Price; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $record->Curr; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $record->Delivery_status; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $record->Doc_Date; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $record->Crcy; ?>
+                                    </td>
+                                    <td class="action-btns">
+                                        <a class="btn btn-primary btn-sm" href="#">
+                                            <i class="fas fa-folder"></i> Details
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="#">
+                                            <i class="fas fa-trash"></i> Delete
+                                        </a>
+                                        <a class="btn btn-info btn-sm" href="#">
+                                            <i class="fas fa-pencil-alt"></i> Edit
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                                 </tbody>
                                 <tfoot>
                                     <tr>
@@ -106,12 +171,16 @@
                                         <th rowspan="1" colspan="1">7</th>
                                         <th rowspan="1" colspan="1">8</th>
                                         <th rowspan="1" colspan="1">9</th>
+                                        <th rowspan="1" colspan="1">10</th>
+                                        <th rowspan="1" colspan="1">11</th>
+                                        <th rowspan="1" colspan="1">12</th>
+                                        <th rowspan="1" colspan="1">13</th>
                                     </tr>
                                 </tfoot>
                             </table>
                         </div>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-sm-12 col-md-5">
                             <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1
                                 to 10
@@ -142,7 +211,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -159,7 +228,12 @@
 
 <!-- Script JS -->
 <?php $this->load->view('home/template/scriptjs') ?>
+
+<script>
+    $(document).ready(function () {
+        let table = new DataTable('#myTable');
+    });
+</script>
 </body>
 
 </html>
-
