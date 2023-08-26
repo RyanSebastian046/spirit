@@ -18,18 +18,19 @@
             <div class="card-header">
                 <h3 class="card-title" style="text-align:center"><b>DATA DELIVERY</b></h3>
             </div>
-            <input type="submit" value="Create Wew" class="btn btn-success btn-create float-center">
+           
             <div class="card-body">
                 <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
                     <div class="row">
                         <div class="col-sm-12">
-                            <table id="myTable" class="table table-striped table-bordered" style="width:100%">
+                        <!-- <input type="submit" value="Create Wew" class="btn btn-success btn-create float-center"> -->
+                        <table id="example" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th class="sorting sorting_asc" tabindex="0" aria-controls="example1"
                                             rowspan="1" colspan="1" aria-sort="ascending"
                                             aria-label="Rendering engine: activate to sort column descending">
-                                            JidNumber
+                                            JidNo
                                         </th>
                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1" aria-label="Browser: activate to sort column ascending">
@@ -169,12 +170,18 @@
 </div>
 
 <!-- Script JS -->
-<?php $this->load->view('home/template/scriptjs') ?>
+<?php $this->load->view('admin/template/scriptjs') ?>
 
 <script>
-    $(document).ready(function () {
-        let table = new DataTable('#myTable');
-    });
+$(document).ready(function() {
+    var table = $('#example').DataTable( {
+        lengthMenu: [ 10, 25, 50, 75, 100 ],
+        buttons: [ 'copy', 'excel', 'print','colvis' ]
+    } );
+ 
+    table.buttons().container()
+        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+} );
 </script>
 </body>
 

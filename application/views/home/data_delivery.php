@@ -92,7 +92,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach ($records as $record): ?>
+                                <!-- <?php foreach ($records as $record): ?>
                                 <tr>
                                     <td>
                                         <?php echo $record->JidNumber; ?>
@@ -142,7 +142,7 @@
                                         </a>
                                     </td>
                                 </tr>
-                            <?php endforeach; ?>
+                            <?php endforeach; ?> -->
                                 </tbody>
                                 <tfoot>
                                     <tr>
