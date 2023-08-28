@@ -5,6 +5,15 @@
       style="opacity: .8">
     <span class="brand-text text-bold">SPIRIT IPT</span>
   </a>
+        <!-- User Panel
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fas fa-user"></i>
+            <p>
+              User Panel
+            </p>
+          </a>
+        </li> -->
 
   <div class="sidebar">
 
