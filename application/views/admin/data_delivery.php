@@ -161,8 +161,6 @@
         </div>
     </div>
 </div>
-</div>
-</div>
 
 <!-- Footer -->
 <?php $this->load->view('home/template/footer') ?>
