@@ -13,8 +13,8 @@
   <?php $this->load->view('admin/template/sidebar') ?>
 
   <!-- Content -->
-  <!-- <div class="content-wrapper">
-    <div class="card card-primary">
+  <div class="content-wrapper">
+    <!-- <div class="card card-primary">
       <div class="card-header">
         <h3 class="card-title">Area Chart</h3>
         <div class="card-tools">
@@ -42,9 +42,9 @@
         </div>
       </div>
 
-    </div>
+    </div> -->
 
-  </div> -->
+  </div>
 
   <!-- Footer -->
   <?php $this->load->view('admin/template/footer') ?>

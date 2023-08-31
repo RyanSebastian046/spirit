@@ -86,7 +86,7 @@
 
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="login" class="h1"><b>SPIRIT</b>IPT</a>
+                <a href="loginuser" class="h1"><b>SPIRIT</b>IPT</a>
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
@@ -111,7 +111,7 @@
                         <div class="container">
 
                             <!-- Membuat tombol yang mengarahkan ke halaman lain -->
-                            <a href="<?php echo site_url('admin/Admin/dashboard') ?>"
+                            <a href="<?php echo site_url('admin/Dashboard/dashboard') ?>"
                                 class="btn btn-primary btn-block">Sign In</a>
                         </div>
 

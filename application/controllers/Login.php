@@ -34,5 +34,24 @@ class Login extends CI_Controller {
             }
         }
     }
+    public function loginuser() {
+        $this->form_validation->set_rules('username', 'Username', 'required');
+        $this->form_validation->set_rules('password', 'Password', 'required');
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->load->view('login_formuser');
+        } else {
+            $username = $this->input->post('username');
+            $password = $this->input->post('password');
+            
+            if ($this->auth_model->check_loginuser($username, $password)) {
+                // Jika login sukses, redirect ke halaman lain
+                redirect('admin/Dashboard/dashboard');
+            } else {
+                $data['error'] = 'Username atau password salah';
+                $this->load->view('login_formuser', $data);
+            }
+        }
+    }
 }
 ?>
