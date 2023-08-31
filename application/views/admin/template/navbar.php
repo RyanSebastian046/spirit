@@ -12,7 +12,7 @@
       Admin
     </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="<?php echo site_url('admin/Dashboard/login') ?>">Keluar</a>
+      <a class="dropdown-item" href="<?php echo site_url('login') ?>">Keluar</a>
     </div>
   </li>
     <div class="nav-item navbar-brand my-auto mx-auto">

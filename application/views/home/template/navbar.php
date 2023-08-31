@@ -28,10 +28,10 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
-          Admin
+          User
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<?php echo site_url('admin/Dashboard/login') ?>">Keluar</a>
+          <a class="dropdown-item" href="<?php echo site_url('login/loginuser') ?>">Keluar</a>
         </div>
       </li>
     </ul>
